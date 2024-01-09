@@ -76,8 +76,9 @@ func doCombineClass(_ info: String) {
 }
 
 func doCombineVariable(_ info: String) {
-    let terms = info.split(separator: " ")
+    var terms = info.split(separator: " ")
     let variableName = "\(terms[0])"
+    terms.removeFirst()
     print(variableName + combineTerms(from: terms))
 }
 
